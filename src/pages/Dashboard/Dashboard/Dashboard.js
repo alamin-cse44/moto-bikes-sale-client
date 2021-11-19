@@ -25,6 +25,7 @@ import AddHomeBike from '../AddHomeBike/AddHomeBike';
 import Pay from '../Pay/Pay';
 import Review from '../Review/Review';
 import ManageProducts from '../ManageProducts/ManageProducts';
+import ManageAllOrders from '../ManageAllOrders/ManageAllOrders';
 
 const drawerWidth = 200;
 
@@ -81,6 +82,11 @@ function DashBoard(props) {
 
                 <Link style={{textDecoration: 'none'}} to={`${url}/manageProducts`}>
                   <Button>Manage Products</Button>
+                </Link>
+                 <br />
+
+                <Link style={{textDecoration: 'none'}} to={`${url}/allOrders`}>
+                  <Button>Manage All Orders</Button>
                 </Link>
                  <br />
 
@@ -191,6 +197,9 @@ function DashBoard(props) {
         </AdminRoute>
         <AdminRoute path={`${path}/manageProducts`}>
           <ManageProducts></ManageProducts>
+        </AdminRoute>
+        <AdminRoute path={`${path}/allOrders`}>
+          <ManageAllOrders></ManageAllOrders>
         </AdminRoute>
         <AdminRoute path={`${path}/addExploreBikes`}>
           <AddExploreBikes></AddExploreBikes>
